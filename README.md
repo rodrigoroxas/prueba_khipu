@@ -71,13 +71,11 @@ Abre tu navegador en [http://localhost:5000](http://localhost:5000)
 
 ## 🖼️ Capturas
 
-![screenshot](https://imgur.com/dsiCQe5)
-![screenshot](https://imgur.com/bqQfpAg)
-![screenshot](https://imgur.com/nVJ5CI3)
-![screenshot](https://imgur.com/0ZjyEgu)
-![screenshot](https://imgur.com/3dMdd8r)
-![screenshot](https://imgur.com/YkrF105)
-
+![screenshot1](https://i.imgur.com/dsiCQe5.png)
+![screenshot2](https://i.imgur.com/bqQfpAg.png)
+![screenshot3](https://i.imgur.com/nVJ5CI3.png)
+![screenshot4](https://i.imgur.com/0ZjyEgu.png)
+![screenshot5](https://i.imgur.com/3dMdd8r.png)
 
 ---
 
@@ -96,8 +94,7 @@ Este proyecto está configurado para funcionar en modo desarrollador usando **De
 
 ## 📬 Contacto
 
-Desarrollado por **Rodrigo** como parte de un proceso técnico.  
-¿Preguntas o sugerencias? Contáctame por LinkedIn o GitHub.
-[LinkedIn](https://www.linkedin.com/in/rodrigorojasanalistaprog/)
----
+Desarrollado por **Rodrigo Rojas** como parte de un proceso técnico.  
+🔗 [Mi LinkedIn](https://www.linkedin.com/in/rodrigorojasanalistaprog/)
 
+---
