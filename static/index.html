@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pago con Khipu</title>
+</head>
+<body>
+  <h2>Crear un cobro con Khipu</h2>
+
+  <label>Monto (CLP): <input type="number" id="amount" value="1500"></label><br>
+  <label>Email del pagador: <input type="email" id="email" value="cliente@correo.com"></label><br>
+  <label>ID transacción: <input type="text" id="transaction_id" value="ABC123"></label><br>
+
+  <label>Banco:
+    <select id="bank_select">
+      <option value="">Seleccionando bancos...</option>
+    </select>
+  </label><br>
+
+  <button onclick="crearCobro()">Crear Cobro</button>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+    window.onload = async () => {
+      try {
+        const res = await fetch('/bancos');
+        const bancosResponse = await res.json();
+
+        const bancos = bancosResponse.banks || [];
+        const select = document.getElementById('bank_select');
+        select.innerHTML = '<option value="">-- Selecciona un banco --</option>';
+
+        bancos.forEach(banco => {
+          const option = document.createElement('option');
+          option.value = banco.bank_id; // ✅ uso correcto de bank_id
+          option.text = banco.name;
+          select.appendChild(option);
+        });
+      } catch (err) {
+        console.error('Error cargando bancos:', err);
+        document.getElementById('resultado').innerText =
+          '❌ Error al cargar bancos. Ver consola.';
+      }
+    };
+
+    async function crearCobro() {
+      const res = await fetch('/crear-cobro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: document.getElementById('amount').value,
+          payer_email: document.getElementById('email').value,
+          transaction_id: document.getElementById('transaction_id').value,
+          bank_id: document.getElementById('bank_select').value
+        })
+      });
+
+      const data = await res.json();
+      if (data.payment_url) {
+        document.getElementById('resultado').innerHTML =
+          `✅ Link de pago: <a href="${data.payment_url}" target="_blank">Pagar ahora</a>`;
+      } else {
+        document.getElementById('resultado').innerText =
+          '❌ Error: ' + (data.message || 'No se pudo crear el cobro');
+      }
+    }
+  </script>
+</body>
+</html>
