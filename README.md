@@ -69,9 +69,15 @@ Abre tu navegador en [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## 🖼️ Captura
+## 🖼️ Capturas
 
-![screenshot](https://user-images.githubusercontent.com/tu_usuario/demo.png)
+![screenshot](https://imgur.com/dsiCQe5)
+![screenshot](https://imgur.com/bqQfpAg)
+![screenshot](https://imgur.com/nVJ5CI3)
+![screenshot](https://imgur.com/0ZjyEgu)
+![screenshot](https://imgur.com/3dMdd8r)
+![screenshot](https://imgur.com/YkrF105)
+
 
 ---
 
@@ -92,6 +98,6 @@ Este proyecto está configurado para funcionar en modo desarrollador usando **De
 
 Desarrollado por **Rodrigo** como parte de un proceso técnico.  
 ¿Preguntas o sugerencias? Contáctame por LinkedIn o GitHub.
-
+[LinkedIn](https://www.linkedin.com/in/rodrigorojasanalistaprog/)
 ---
 
